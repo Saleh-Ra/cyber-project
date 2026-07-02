@@ -15,9 +15,9 @@ This project reproduces and critically evaluates a published phishing-detection 
 
 Work includes:
 
-- Re-running the authors' notebook (`phishing_detection_repo/All_Classifair.ipynb`)
+- Reproducing the authors' notebook from their [GitHub repository](https://github.com/fafal-abnir/phishing_detection)
 - An independent analysis in `project.ipynb` (EDA, improved CV pipeline, model comparison, error analysis)
-- A written report (`report.txt` / PDF) covering summary, critical evaluation, reproducibility, and conclusions
+- A written report (`report.pdf`) covering summary, critical evaluation, reproducibility, and conclusions
 
 ---
 
@@ -51,12 +51,10 @@ Labels: `-1` = phishing, `1` = legitimate.
 ```
 cyber-project/
 ├── project.ipynb          # Main notebook (EDA, models, evaluation)
-├── report.txt             # Report source (export to PDF for submission)
+├── report.pdf             # Written report
 ├── requirements.txt       # Python dependencies
-├── data/
-│   └── dataset.csv
-└── phishing_detection_repo/   # Cloned authors' repo (reference / reproduction)
-    └── All_Classifair.ipynb
+└── data/
+    └── dataset.csv
 ```
 
 ---
@@ -88,8 +86,11 @@ The notebook expects `data/dataset.csv` relative to the project root.
 
 ### 4. (Optional) Reproduce the authors' notebook
 
+Clone their repository separately:
+
 ```bash
-cd phishing_detection_repo
+git clone https://github.com/fafal-abnir/phishing_detection.git
+cd phishing_detection
 pip install xgboost lightgbm catboost
 jupyter notebook All_Classifair.ipynb
 ```
